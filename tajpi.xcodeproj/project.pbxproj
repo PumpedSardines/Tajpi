@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */; };
+		803AE82427A092DE00DA069A /* tajpi_512.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82027A092DE00DA069A /* tajpi_512.jpg */; };
+		803AE82527A092DE00DA069A /* tajpi_64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82127A092DE00DA069A /* tajpi_64.jpg */; };
+		803AE82627A092DE00DA069A /* tajpi_256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82227A092DE00DA069A /* tajpi_256.jpg */; };
+		803AE82727A092DE00DA069A /* tajpi_32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82327A092DE00DA069A /* tajpi_32.jpg */; };
+		804948A427A03AD900370877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948A327A03AD900370877 /* AppDelegate.swift */; };
+		804948A827A03ADA00370877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948A727A03ADA00370877 /* Assets.xcassets */; };
+		804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948AA27A03ADA00370877 /* Preview Assets.xcassets */; };
+		804948B327A03B2900370877 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948B227A03B2900370877 /* main.swift */; };
+		804948B927A044FF00370877 /* locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948B827A044FF00370877 /* locale.swift */; };
+		804948BC27A0463E00370877 /* eng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BB27A0463E00370877 /* eng.swift */; };
+		804948BE27A0478100370877 /* eo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BD27A0478100370877 /* eo.swift */; };
+		804948C027A0499100370877 /* acquirePrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BF27A0499100370877 /* acquirePrivileges.swift */; };
+		80A4570C27A0652E004E3CC2 /* sv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4570B27A0652E004E3CC2 /* sv.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRoutine.swift; sourceTree = "<group>"; };
+		803AE82027A092DE00DA069A /* tajpi_512.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_512.jpg; sourceTree = "<group>"; };
+		803AE82127A092DE00DA069A /* tajpi_64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_64.jpg; sourceTree = "<group>"; };
+		803AE82227A092DE00DA069A /* tajpi_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_256.jpg; sourceTree = "<group>"; };
+		803AE82327A092DE00DA069A /* tajpi_32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_32.jpg; sourceTree = "<group>"; };
+		804948A027A03AD900370877 /* tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		804948A327A03AD900370877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		804948A727A03ADA00370877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		804948AA27A03ADA00370877 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		804948AC27A03ADA00370877 /* tajpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tajpi.entitlements; sourceTree = "<group>"; };
+		804948B227A03B2900370877 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		804948B427A03CA000370877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		804948B827A044FF00370877 /* locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locale.swift; sourceTree = "<group>"; };
+		804948BB27A0463E00370877 /* eng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eng.swift; sourceTree = "<group>"; };
+		804948BD27A0478100370877 /* eo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eo.swift; sourceTree = "<group>"; };
+		804948BF27A0499100370877 /* acquirePrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acquirePrivileges.swift; sourceTree = "<group>"; };
+		80A4570B27A0652E004E3CC2 /* sv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8049489D27A03AD900370877 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8049489727A03AD900370877 = {
+			isa = PBXGroup;
+			children = (
+				804948A227A03AD900370877 /* tajpi */,
+				804948A127A03AD900370877 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		804948A127A03AD900370877 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				804948A027A03AD900370877 /* tajpi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		804948A227A03AD900370877 /* tajpi */ = {
+			isa = PBXGroup;
+			children = (
+				804948BA27A0462E00370877 /* locale */,
+				804948B727A03F1500370877 /* assets */,
+				804948B427A03CA000370877 /* Info.plist */,
+				804948A327A03AD900370877 /* AppDelegate.swift */,
+				804948B227A03B2900370877 /* main.swift */,
+				804948A727A03ADA00370877 /* Assets.xcassets */,
+				804948AC27A03ADA00370877 /* tajpi.entitlements */,
+				804948A927A03ADA00370877 /* Preview Content */,
+				804948BF27A0499100370877 /* acquirePrivileges.swift */,
+				803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */,
+			);
+			path = tajpi;
+			sourceTree = "<group>";
+		};
+		804948A927A03ADA00370877 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				804948AA27A03ADA00370877 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		804948B727A03F1500370877 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				803AE82327A092DE00DA069A /* tajpi_32.jpg */,
+				803AE82127A092DE00DA069A /* tajpi_64.jpg */,
+				803AE82227A092DE00DA069A /* tajpi_256.jpg */,
+				803AE82027A092DE00DA069A /* tajpi_512.jpg */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		804948BA27A0462E00370877 /* locale */ = {
+			isa = PBXGroup;
+			children = (
+				804948B827A044FF00370877 /* locale.swift */,
+				804948BB27A0463E00370877 /* eng.swift */,
+				804948BD27A0478100370877 /* eo.swift */,
+				80A4570B27A0652E004E3CC2 /* sv.swift */,
+			);
+			path = locale;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8049489F27A03AD900370877 /* tajpi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "tajpi" */;
+			buildPhases = (
+				8049489C27A03AD900370877 /* Sources */,
+				8049489D27A03AD900370877 /* Frameworks */,
+				8049489E27A03AD900370877 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tajpi;
+			productName = tajpi;
+			productReference = 804948A027A03AD900370877 /* tajpi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8049489827A03AD900370877 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8049489F27A03AD900370877 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8049489B27A03AD900370877 /* Build configuration list for PBXProject "tajpi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8049489727A03AD900370877;
+			productRefGroup = 804948A127A03AD900370877 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8049489F27A03AD900370877 /* tajpi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8049489E27A03AD900370877 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803AE82527A092DE00DA069A /* tajpi_64.jpg in Resources */,
+				803AE82727A092DE00DA069A /* tajpi_32.jpg in Resources */,
+				804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */,
+				803AE82427A092DE00DA069A /* tajpi_512.jpg in Resources */,
+				804948A827A03ADA00370877 /* Assets.xcassets in Resources */,
+				803AE82627A092DE00DA069A /* tajpi_256.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8049489C27A03AD900370877 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				804948B327A03B2900370877 /* main.swift in Sources */,
+				804948A427A03AD900370877 /* AppDelegate.swift in Sources */,
+				803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */,
+				804948C027A0499100370877 /* acquirePrivileges.swift in Sources */,
+				804948BE27A0478100370877 /* eo.swift in Sources */,
+				80A4570C27A0652E004E3CC2 /* sv.swift in Sources */,
+				804948BC27A0463E00370877 /* eng.swift in Sources */,
+				804948B927A044FF00370877 /* locale.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		804948AD27A03ADA00370877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		804948AE27A03ADA00370877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		804948B027A03ADA00370877 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tajpi/tajpi.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tajpi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tajpi/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.tajpi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		804948B127A03ADA00370877 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = tajpi/tajpiRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tajpi/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tajpi/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.tajpi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8049489B27A03AD900370877 /* Build configuration list for PBXProject "tajpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804948AD27A03ADA00370877 /* Debug */,
+				804948AE27A03ADA00370877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "tajpi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804948B027A03ADA00370877 /* Debug */,
+				804948B127A03ADA00370877 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8049489827A03AD900370877 /* Project object */;
+}
