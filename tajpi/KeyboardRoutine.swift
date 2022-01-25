@@ -3,6 +3,8 @@
 //  tajpi
 //
 //  Created by Fritiof Rusck on 2022-01-25.
+// 
+//  This file handles keyboard events and will block / change depending on state
 //
 
 import Foundation
@@ -10,13 +12,13 @@ import SwiftUI
 
 class KeyboardRoutine {
     
-    static var option = false
-    static var shift = false
-    static var paused = false
+    static var option = false   // Weather or not the option key is pressed down
+    static var shift = false    // Weather or not the shift key is pressed down
+    static var paused = false   // If the program should pause the letter switching
     
     static func Init() {
-        let accesser = AccessibilityAuthorization()
-        accesser.checkAccessibility {
+        let accessor = AccessibilityAuthorization()
+        accessor.checkAccessibility {
             let eventMask = (1 << CGEventType.keyDown.rawValue) | (1 << CGEventType.keyUp.rawValue) | (1 << CGEventType.flagsChanged.rawValue)
             guard let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap,
                                                    place: .headInsertEventTap,
@@ -41,10 +43,12 @@ class KeyboardRoutine {
 func CGEventCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEvent, refcon : UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
     print("")
     
+    // If either option or shift was pressed down
     if type == .flagsChanged {
         if let e = NSEvent(cgEvent: event) {
             let current = e.modifierFlags.intersection(.deviceIndependentFlagsMask)
             
+            // Modify state
             KeyboardRoutine.option = false
             KeyboardRoutine.shift = false
             
@@ -58,6 +62,7 @@ func CGEventCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEven
         }
     }
 
+    // Check for keypress
     if [.keyDown , .keyUp].contains(type) {
         var keyCode = event.getIntegerValueField(.keyboardEventKeycode)
         if [8, 38, 32, 1, 5, 4].contains(keyCode) && KeyboardRoutine.option && !KeyboardRoutine.paused {
