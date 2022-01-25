@@ -7,9 +7,7 @@ class AccessibilityAuthorization {
     public func checkAccessibility(completion: @escaping () -> Void) {
         if !AXIsProcessTrusted() {
             
-            
             AXUIElementCreateApplication(getpid())
-            
             
             let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
             let privOptions = [trusted: true]
