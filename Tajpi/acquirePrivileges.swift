@@ -5,15 +5,11 @@ import Cocoa
 class AccessibilityAuthorization {
     
     public func checkAccessibility(completion: @escaping () -> Void) {
-        if !AXIsProcessTrusted() {
-            
-            AXUIElementCreateApplication(getpid())
-            
-            let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
-            let privOptions = [trusted: true]
-            let accessEnabled = AXIsProcessTrustedWithOptions(privOptions as CFDictionary)
-            print(accessEnabled)
-            
+        let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
+        let privOptions = [trusted: true]
+        let accessEnabled = AXIsProcessTrustedWithOptions(privOptions as CFDictionary)
+        
+        if !accessEnabled {
             pollAccessibility(completion: completion)
         } else {
             completion()

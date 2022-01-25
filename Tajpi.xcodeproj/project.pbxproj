@@ -29,7 +29,7 @@
 		803AE82127A092DE00DA069A /* tajpi_64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_64.jpg; sourceTree = "<group>"; };
 		803AE82227A092DE00DA069A /* tajpi_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_256.jpg; sourceTree = "<group>"; };
 		803AE82327A092DE00DA069A /* tajpi_32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_32.jpg; sourceTree = "<group>"; };
-		804948A027A03AD900370877 /* tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		804948A027A03AD900370877 /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804948A327A03AD900370877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		804948A727A03ADA00370877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		804948AA27A03ADA00370877 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		8049489727A03AD900370877 = {
 			isa = PBXGroup;
 			children = (
-				804948A227A03AD900370877 /* tajpi */,
+				804948A227A03AD900370877 /* Tajpi */,
 				804948A127A03AD900370877 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,26 +65,26 @@
 		804948A127A03AD900370877 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				804948A027A03AD900370877 /* tajpi.app */,
+				804948A027A03AD900370877 /* Tajpi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		804948A227A03AD900370877 /* tajpi */ = {
+		804948A227A03AD900370877 /* Tajpi */ = {
 			isa = PBXGroup;
 			children = (
 				804948BA27A0462E00370877 /* locale */,
 				804948B727A03F1500370877 /* assets */,
-				804948B427A03CA000370877 /* Info.plist */,
 				804948A327A03AD900370877 /* AppDelegate.swift */,
 				804948B227A03B2900370877 /* main.swift */,
+				804948BF27A0499100370877 /* acquirePrivileges.swift */,
+				803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */,
+				804948B427A03CA000370877 /* Info.plist */,
 				804948A727A03ADA00370877 /* Assets.xcassets */,
 				804948AC27A03ADA00370877 /* tajpi.entitlements */,
 				804948A927A03ADA00370877 /* Preview Content */,
-				804948BF27A0499100370877 /* acquirePrivileges.swift */,
-				803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */,
 			);
-			path = tajpi;
+			path = Tajpi;
 			sourceTree = "<group>";
 		};
 		804948A927A03ADA00370877 /* Preview Content */ = {
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8049489F27A03AD900370877 /* tajpi */ = {
+		8049489F27A03AD900370877 /* Tajpi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "tajpi" */;
+			buildConfigurationList = 804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "Tajpi" */;
 			buildPhases = (
 				8049489C27A03AD900370877 /* Sources */,
 				8049489D27A03AD900370877 /* Frameworks */,
@@ -132,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = tajpi;
+			name = Tajpi;
 			productName = tajpi;
-			productReference = 804948A027A03AD900370877 /* tajpi.app */;
+			productReference = 804948A027A03AD900370877 /* Tajpi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8049489B27A03AD900370877 /* Build configuration list for PBXProject "tajpi" */;
+			buildConfigurationList = 8049489B27A03AD900370877 /* Build configuration list for PBXProject "Tajpi" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8049489F27A03AD900370877 /* tajpi */,
+				8049489F27A03AD900370877 /* Tajpi */,
 			);
 		};
 /* End PBXProject section */
@@ -326,6 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = tajpi/tajpi.entitlements;
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -353,6 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = tajpi/tajpiRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -368,8 +370,9 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.tajpi";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -378,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8049489B27A03AD900370877 /* Build configuration list for PBXProject "tajpi" */ = {
+		8049489B27A03AD900370877 /* Build configuration list for PBXProject "Tajpi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				804948AD27A03ADA00370877 /* Debug */,
@@ -387,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "tajpi" */ = {
+		804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "Tajpi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				804948B027A03ADA00370877 /* Debug */,
