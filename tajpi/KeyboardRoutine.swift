@@ -65,7 +65,8 @@ func CGEventCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEven
     // Check for keypress
     if [.keyDown , .keyUp].contains(type) {
         var keyCode = event.getIntegerValueField(.keyboardEventKeycode)
-        if [8, 38, 32, 1, 5, 4].contains(keyCode) && KeyboardRoutine.option && !KeyboardRoutine.paused {
+        var repeatedKey = event.getIntegerValueField(.keyboardEventAutorepeat)
+        if [8, 38, 32, 1, 5, 4].contains(keyCode) && KeyboardRoutine.option && !KeyboardRoutine.paused && repeatedKey == 0 {
             var letter = ""
             let shift = KeyboardRoutine.shift
             
