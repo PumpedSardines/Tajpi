@@ -9,15 +9,15 @@ import Foundation
 
 class Eo: Locale {
     func optionMode() -> String {
-        return "Option + key"
+        return "Option + butono"
     }
     
     func automaticTransformMode() -> String {
-        return "Transform sh and sx"
+        return "Transformas sh kaj sx"
     }
     
     func mode() -> String {
-        return "Modes"
+        return "Reĝimo"
     }
     
     static func name() -> String {
