@@ -56,14 +56,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let locale = LocaleManager.locale
         
         // Create a info text that diplays current status
-        let info = NSMenuItem(title: locale.info(!paused), action: nil , keyEquivalent: "")
+        let info = NSMenuItem(title: locale.info(!paused), action: nil, keyEquivalent: "")
         info.isEnabled = false
         menu.addItem(info)
         
         menu.addItem(NSMenuItem.separator())
         
         // Create a button to enable or disable execution
-        let runningButton = NSMenuItem(title: locale.running(!paused), action: #selector(onMenuRunningClick) , keyEquivalent: "")
+        let runningButton = NSMenuItem(title: locale.running(!paused), action: #selector(onMenuRunningClick), keyEquivalent: "")
         menu.addItem(runningButton)
         
         let languageButton = NSMenuItem(title: locale.language(), action: nil, keyEquivalent: "")
