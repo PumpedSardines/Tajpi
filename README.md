@@ -1,11 +1,12 @@
 # Tajpi
-A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/) that lets you type esperanto letters by holding down the option key.
+A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/). Tajpi lets you type esperanto letters by either holding down the option key or automatically transforming sh or sx combinations into corresponding Esperanto letter.
 ## Table of Contents
 
 * [Download](#download)
     * [Give Accessibility access](#give-accessibility-access)
     * [Launch on Startup](#launch-on-startup)
 * [How to use](#how-to-use)
+    * [Modes](#modes)
 * [Possible problems](#possible-problems)
 ## Download
 Download the [latest release](https://github.com/PumpedSardines/Tajpi/releases/tag/1.0.1) from this GitHub. To run this application you need to follow [these steps](https://support.apple.com/en-ph/guide/mac-help/mh40616/mac) for allowing execution. 
@@ -38,6 +39,13 @@ Then find the location of the Application in the finder window and double click 
 
 
 ## How to use
-Tajpi will appear as an icon in the menu bar. If you click on it, you'll be greeted with a settings interface. To type an esperanto letter press and hold the option key as you press down either c g h j s u and they will transform into ĉ ĝ ĥ ĵ ŝ ŭ
+Tajpi will appear as an icon in the menu bar. If you click on it, you'll be greeted with a settings interface.
+
+### Modes
+There exists two modes for entering Esperanto letters. Both can be enabled at the same time.
+
+**Mode 1**: To type an esperanto letter press and hold the option key as you press down either c g h j s u and they will transform into ĉ ĝ ĥ ĵ ŝ ŭ.
+
+**Mode 2**: Tajpi will keep track of the letters you press and when it sees the combination sh or sx it will automatically transform it into the corresponding esperanto letter. This is especially useful for people who are already used to typing Esperanto words with x or h.
 ## Possible problems
 Tajpi won't work without enabled accessability permissions. Double check that permissions are set. If you've downloaded a new version, you might need to remove tajpi from the list and add it again by pressing the "-" sign at the bottom left of the ui.
