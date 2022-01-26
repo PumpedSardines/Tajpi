@@ -1,6 +1,12 @@
 # Tajpi
 A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/) that lets you type esperanto letters by holding down the alt-gr key.
+## Table of Contents
 
+* [Download](#download)
+    * [Give Accessibility access](#give-accessibility-access)
+    * [Launch on Startup](#launch-on-startup)
+* [How to use](#how-to-use)
+* [Possible problems](#possible-problems)
 ## Download
 Download the [latest release](https://github.com/PumpedSardines/Tajpi/releases/tag/1.0.1) from this GitHub. To run this application you need to follow [these steps](https://support.apple.com/en-ph/guide/mac-help/mh40616/mac) for allowing execution. 
 ### Give Accessibility access
