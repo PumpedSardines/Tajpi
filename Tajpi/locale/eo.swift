@@ -13,7 +13,7 @@ class Eo: Locale {
     }
     
     func automaticTransformMode() -> String {
-        return "Transformas sh kaj sx"
+        return "Transformu sh kaj sx"
     }
     
     func mode() -> String {
