@@ -9,7 +9,7 @@ class AccessibilityAuthorization {
         let privOptions = [trusted: true]
         let accessEnabled = AXIsProcessTrustedWithOptions(privOptions as CFDictionary)
         
-        if !accessEnabled {
+        if !accessEnabled || !AXIsProcessTrusted() {
             pollAccessibility(completion: completion)
         } else {
             completion()

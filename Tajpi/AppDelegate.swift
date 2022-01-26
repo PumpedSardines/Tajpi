@@ -10,22 +10,34 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem!
-    var locale: Locale = Eo()
     var globalObserver: Any!
     var localObserver: Any!
     
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        KeyboardRoutine.Init();
+        // Init Keyboard
         
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
-            button.title = "Tajpi"
+            let img = NSImage(named: NSImage.Name("StatusIcon"))!
+            img.size = NSMakeSize(18.0, 18.0)
+            button.image = img
         }
         
         setupMenus()
         
+        // If the language is changed, update the menu
+        LocaleManager.onChange {
+            self.setupMenus()
+        }
         
+    }
+    
+    func applicationWillTerminate(_ notification: Notification) {
+        // I'm not very experienced with apples apis
+        // Without this exit(0), Tajpi would only lauch after clicking the icon twice
+        // Weird...
+        exit(0)
     }
     
     @objc func onMenuRunningClick() {
@@ -38,9 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Create the menu
         let menu = NSMenu()
         menu.autoenablesItems = false // This i needed for isEnabled to work
+        let localeMenu = getLocaleMenu();
+        let locale = LocaleManager.locale
         
         // Create a info text that diplays current status
-        let info = NSMenuItem(title: locale.info(!KeyboardRoutine.paused), action: #selector(onMenuRunningClick) , keyEquivalent: "")
+        let info = NSMenuItem(title: locale.info(!KeyboardRoutine.paused), action: nil , keyEquivalent: "")
         info.isEnabled = false
         menu.addItem(info)
         
@@ -52,7 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let languageButton = NSMenuItem(title: locale.language(), action: nil, keyEquivalent: "")
         menu.addItem(languageButton)
-        menu.setSubmenu(getLanguageMenu(), for: languageButton)
+        menu.setSubmenu(localeMenu, for: languageButton)
         
 
         
@@ -66,41 +80,41 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func setLanguageEng() {
-        locale = Eng();
-        setupMenus()
+        LocaleManager.updateLocale(locale: Eng())
     }
     
     @objc func setLanguageEo() {
-        locale = Eo();
-        setupMenus()
+        LocaleManager.updateLocale(locale: Eo())
     }
     
     @objc func setLanguageSv() {
-        locale = Sv();
-        setupMenus()
+        LocaleManager.updateLocale(locale: Sv())
     }
     
-    func getLanguageMenu() -> NSMenu {
+    func getLocaleMenu() -> NSMenu {
         let menu = NSMenu();
+        menu.autoenablesItems = true
+        
         
         // Init eng button
         let eng = NSMenuItem(title: Eng.name(), action: #selector(setLanguageEng) , keyEquivalent: "")
+        eng.isEnabled = true;
         eng.state = .off
-        if(locale is Eng) {
+        if(LocaleManager.locale is Eng) {
             eng.state = .on
         }
         
         // Init eo button
         let eo = NSMenuItem(title: Eo.name(), action: #selector(setLanguageEo) , keyEquivalent: "")
         eo.state = .off
-        if(locale is Eo) {
+        if(LocaleManager.locale is Eo) {
             eo.state = .on
         }
         
         // Init eng button
         let sv = NSMenuItem(title: Sv.name(), action: #selector(setLanguageSv) , keyEquivalent: "")
         sv.state = .off
-        if(locale is Sv) {
+        if(LocaleManager.locale is Sv) {
             sv.state = .on
         }
         

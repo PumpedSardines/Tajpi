@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */; };
-		803AE82427A092DE00DA069A /* tajpi_512.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82027A092DE00DA069A /* tajpi_512.jpg */; };
-		803AE82527A092DE00DA069A /* tajpi_64.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82127A092DE00DA069A /* tajpi_64.jpg */; };
-		803AE82627A092DE00DA069A /* tajpi_256.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82227A092DE00DA069A /* tajpi_256.jpg */; };
-		803AE82727A092DE00DA069A /* tajpi_32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 803AE82327A092DE00DA069A /* tajpi_32.jpg */; };
 		804948A427A03AD900370877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948A327A03AD900370877 /* AppDelegate.swift */; };
 		804948A827A03ADA00370877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948A727A03ADA00370877 /* Assets.xcassets */; };
 		804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948AA27A03ADA00370877 /* Preview Assets.xcassets */; };
@@ -20,15 +16,14 @@
 		804948BC27A0463E00370877 /* eng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BB27A0463E00370877 /* eng.swift */; };
 		804948BE27A0478100370877 /* eo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BD27A0478100370877 /* eo.swift */; };
 		804948C027A0499100370877 /* acquirePrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BF27A0499100370877 /* acquirePrivileges.swift */; };
+		80798BBD27A128D9008D6ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80798BBC27A128D9008D6ED2 /* Assets.xcassets */; };
+		80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80798BBF27A12A67008D6ED2 /* LocaleManager.swift */; };
+		80798BC227A13709008D6ED2 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 80798BC127A13709008D6ED2 /* icon */; };
 		80A4570C27A0652E004E3CC2 /* sv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4570B27A0652E004E3CC2 /* sv.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRoutine.swift; sourceTree = "<group>"; };
-		803AE82027A092DE00DA069A /* tajpi_512.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_512.jpg; sourceTree = "<group>"; };
-		803AE82127A092DE00DA069A /* tajpi_64.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_64.jpg; sourceTree = "<group>"; };
-		803AE82227A092DE00DA069A /* tajpi_256.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_256.jpg; sourceTree = "<group>"; };
-		803AE82327A092DE00DA069A /* tajpi_32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tajpi_32.jpg; sourceTree = "<group>"; };
 		804948A027A03AD900370877 /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804948A327A03AD900370877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		804948A727A03ADA00370877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +35,9 @@
 		804948BB27A0463E00370877 /* eng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eng.swift; sourceTree = "<group>"; };
 		804948BD27A0478100370877 /* eo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eo.swift; sourceTree = "<group>"; };
 		804948BF27A0499100370877 /* acquirePrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acquirePrivileges.swift; sourceTree = "<group>"; };
+		80798BBC27A128D9008D6ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80798BBF27A12A67008D6ED2 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
+		80798BC127A13709008D6ED2 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		80A4570B27A0652E004E3CC2 /* sv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,6 +55,7 @@
 		8049489727A03AD900370877 = {
 			isa = PBXGroup;
 			children = (
+				80798BBE27A1290C008D6ED2 /* Assets */,
 				804948A227A03AD900370877 /* Tajpi */,
 				804948A127A03AD900370877 /* Products */,
 			);
@@ -73,11 +72,12 @@
 		804948A227A03AD900370877 /* Tajpi */ = {
 			isa = PBXGroup;
 			children = (
+				80798BBC27A128D9008D6ED2 /* Assets.xcassets */,
 				804948BA27A0462E00370877 /* locale */,
-				804948B727A03F1500370877 /* assets */,
 				804948A327A03AD900370877 /* AppDelegate.swift */,
 				804948B227A03B2900370877 /* main.swift */,
 				804948BF27A0499100370877 /* acquirePrivileges.swift */,
+				80798BBF27A12A67008D6ED2 /* LocaleManager.swift */,
 				803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */,
 				804948B427A03CA000370877 /* Info.plist */,
 				804948A727A03ADA00370877 /* Assets.xcassets */,
@@ -95,17 +95,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		804948B727A03F1500370877 /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				803AE82327A092DE00DA069A /* tajpi_32.jpg */,
-				803AE82127A092DE00DA069A /* tajpi_64.jpg */,
-				803AE82227A092DE00DA069A /* tajpi_256.jpg */,
-				803AE82027A092DE00DA069A /* tajpi_512.jpg */,
-			);
-			path = assets;
-			sourceTree = "<group>";
-		};
 		804948BA27A0462E00370877 /* locale */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +104,14 @@
 				80A4570B27A0652E004E3CC2 /* sv.swift */,
 			);
 			path = locale;
+			sourceTree = "<group>";
+		};
+		80798BBE27A1290C008D6ED2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				80798BC127A13709008D6ED2 /* icon */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +172,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				803AE82527A092DE00DA069A /* tajpi_64.jpg in Resources */,
-				803AE82727A092DE00DA069A /* tajpi_32.jpg in Resources */,
 				804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */,
-				803AE82427A092DE00DA069A /* tajpi_512.jpg in Resources */,
+				80798BC227A13709008D6ED2 /* icon in Resources */,
 				804948A827A03ADA00370877 /* Assets.xcassets in Resources */,
-				803AE82627A092DE00DA069A /* tajpi_256.jpg in Resources */,
+				80798BBD27A128D9008D6ED2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */,
 				804948B327A03B2900370877 /* main.swift in Sources */,
 				804948A427A03AD900370877 /* AppDelegate.swift in Sources */,
 				803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */,
@@ -326,11 +322,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = tajpi/tajpi.entitlements;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tajpi/Preview Content\"";
+				DEVELOPMENT_TEAM = EKBJFR3MTZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tajpi/Info.plist;
@@ -341,7 +338,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.tajpi";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fritiofrusck.tajpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = tajpi/tajpiRelease.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

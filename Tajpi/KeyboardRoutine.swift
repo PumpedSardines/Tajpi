@@ -15,33 +15,38 @@ class KeyboardRoutine {
     static var option = false   // Weather or not the option key is pressed down
     static var shift = false    // Weather or not the shift key is pressed down
     static var paused = false   // If the program should pause the letter switching
+    static var lastKeyCode: Int = -1;
     
-    static func Init() {
+    static func `init`() {
         let accessor = AccessibilityAuthorization()
         accessor.checkAccessibility {
-            let eventMask = (1 << CGEventType.keyDown.rawValue) | (1 << CGEventType.keyUp.rawValue) | (1 << CGEventType.flagsChanged.rawValue)
-            guard let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap,
-                                                   place: .headInsertEventTap,
-                                                   options: .defaultTap,
-                                                   eventsOfInterest: CGEventMask(eventMask),
-                                                   callback: CGEventCallback,
-                                                   userInfo: nil) else {
-                    print("failed to create event tap")
-                    exit(1)
-            }
-
-            let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
-            CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, CFRunLoopMode.commonModes)
-            CGEvent.tapEnable(tap: eventTap, enable: true)
-            CFRunLoopRun()
+            startListening()
         }
+    }
+    
+    static func startListening() {
+        let eventMask = (1 << CGEventType.keyDown.rawValue) | (1 << CGEventType.keyUp.rawValue) | (1 << CGEventType.flagsChanged.rawValue)
+        guard let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap,
+                                               place: .headInsertEventTap,
+                                               options: .defaultTap,
+                                               eventsOfInterest: CGEventMask(eventMask),
+                                               callback: CGEventCallback,
+                                               userInfo: nil)
+        else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {self.startListening()}
+            return;
+        }
+
+        let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
+        CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, CFRunLoopMode.commonModes)
+        CGEvent.tapEnable(tap: eventTap, enable: true)
+        ()
     }
 }
 
 
 
 func CGEventCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEvent, refcon : UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
-    print("")
     
     // If either option or shift was pressed down
     if type == .flagsChanged {
@@ -60,13 +65,22 @@ func CGEventCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEven
                 KeyboardRoutine.option = true
             }
         }
+        return Unmanaged.passRetained(event)
     }
-
+    
+    // Early return if we're paused
+    if KeyboardRoutine.paused {
+        return Unmanaged.passRetained(event)
+    }
+    
     // Check for keypress
     if [.keyDown , .keyUp].contains(type) {
-        var keyCode = event.getIntegerValueField(.keyboardEventKeycode)
-        var repeatedKey = event.getIntegerValueField(.keyboardEventAutorepeat)
-        if [8, 38, 32, 1, 5, 4].contains(keyCode) && KeyboardRoutine.option && !KeyboardRoutine.paused && repeatedKey == 0 {
+        let letters: [Int64] = [8, 38, 32, 1, 5, 4];
+        
+        let keyCode = event.getIntegerValueField(.keyboardEventKeycode)
+        let repeatedKey = event.getIntegerValueField(.keyboardEventAutorepeat)
+        
+        if letters.contains(keyCode) && KeyboardRoutine.option && repeatedKey == 0 {
             var letter = ""
             let shift = KeyboardRoutine.shift
             

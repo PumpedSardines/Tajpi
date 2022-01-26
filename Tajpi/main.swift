@@ -12,6 +12,10 @@ import Foundation
 import SwiftUI
 
 let app = NSApplication.shared
+
+LocaleManager.`init`()
+KeyboardRoutine.`init`();
+
 let delegate = AppDelegate()
 app.delegate = delegate
 
