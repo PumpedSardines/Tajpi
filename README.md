@@ -1,5 +1,5 @@
 # Tajpi
-A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/) that lets you type esperanto letters by holding down the alt-gr key.
+A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/) that lets you type esperanto letters by holding down the option key.
 ## Table of Contents
 
 * [Download](#download)
