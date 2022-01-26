@@ -14,7 +14,7 @@ import SwiftUI
 let app = NSApplication.shared
 
 LocaleManager.`init`()
-KeyboardRoutine.`init`();
+startKeyboardProcess();
 
 let delegate = AppDelegate()
 app.delegate = delegate

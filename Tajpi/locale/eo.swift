@@ -8,6 +8,17 @@
 import Foundation
 
 class Eo: Locale {
+    func optionMode() -> String {
+        return "Option + key"
+    }
+    
+    func automaticTransformMode() -> String {
+        return "Transform sh and sx"
+    }
+    
+    func mode() -> String {
+        return "Modes"
+    }
     
     static func name() -> String {
         return "Esperanto"

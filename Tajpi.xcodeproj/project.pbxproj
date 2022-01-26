@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */; };
+		803AE81F27A0901F00DA069A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AE81E27A0901F00DA069A /* Keyboard.swift */; };
 		804948A427A03AD900370877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948A327A03AD900370877 /* AppDelegate.swift */; };
 		804948A827A03ADA00370877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948A727A03ADA00370877 /* Assets.xcassets */; };
 		804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948AA27A03ADA00370877 /* Preview Assets.xcassets */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardRoutine.swift; sourceTree = "<group>"; };
+		803AE81E27A0901F00DA069A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		804948A027A03AD900370877 /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		804948A327A03AD900370877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		804948A727A03ADA00370877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				804948B227A03B2900370877 /* main.swift */,
 				804948BF27A0499100370877 /* acquirePrivileges.swift */,
 				80798BBF27A12A67008D6ED2 /* LocaleManager.swift */,
-				803AE81E27A0901F00DA069A /* KeyboardRoutine.swift */,
+				803AE81E27A0901F00DA069A /* Keyboard.swift */,
 				804948B427A03CA000370877 /* Info.plist */,
 				804948A727A03ADA00370877 /* Assets.xcassets */,
 				804948AC27A03ADA00370877 /* tajpi.entitlements */,
@@ -189,7 +189,7 @@
 				80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */,
 				804948B327A03B2900370877 /* main.swift in Sources */,
 				804948A427A03AD900370877 /* AppDelegate.swift in Sources */,
-				803AE81F27A0901F00DA069A /* KeyboardRoutine.swift in Sources */,
+				803AE81F27A0901F00DA069A /* Keyboard.swift in Sources */,
 				804948C027A0499100370877 /* acquirePrivileges.swift in Sources */,
 				804948BE27A0478100370877 /* eo.swift in Sources */,
 				80A4570C27A0652E004E3CC2 /* sv.swift in Sources */,

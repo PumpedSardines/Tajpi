@@ -13,4 +13,7 @@ protocol Locale {
     func info(_ running: Bool) -> String
     func quit() -> String
     func language() -> String
+    func mode() -> String
+    func optionMode() -> String
+    func automaticTransformMode() -> String
 }

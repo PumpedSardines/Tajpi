@@ -8,6 +8,17 @@
 import Foundation
 
 class Sv: Locale {
+    func optionMode() -> String {
+        return "Option + knapp"
+    }
+    
+    func automaticTransformMode() -> String {
+        return "Förvandla sh och sx"
+    }
+    
+    func mode() -> String {
+        return "Lägen"
+    }
     
     static func name() -> String {
         return "Svenska"
