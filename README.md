@@ -6,15 +6,15 @@ Download the [latest release](https://github.com/PumpedSardines/Tajpi/releases/t
 ### Give Accessibility access
 After running the program you will need to open System Preferences and go to *Security & Privacy > Accessibility*. Click the lock in the bottom left to make changes. 
 
-<center>
+<div align="center">
     <img src="lock.png" width="50%">
-</center>
+</div>
 
 Click the + sign
 
-<center>
+<div align="center">
     <img src="plus.png" width="50%">
-</center>
+</div>
 
 Then find the location of the Application in the finder window and double click on it.
 
@@ -24,9 +24,9 @@ Some user might want Tajpi to always run. If that's the case you probably want t
 
 Open System Preferences and go to *Users & Groups > Login Items*. 
 Click the plus sign button
-<center>
+<div align="center">
     <img src="user.png" width="50%">
-</center>
+</div>
 
 Then find the location of the Application in the finder window and double click on it.
 
