@@ -47,7 +47,7 @@ func loadMode() {
 
 func storeMode() {
     let defaults = UserDefaults.standard;
-    defaults.set(option ? "on" : "off", forKey: keyboardKey + "option");
+    defaults.set(enableOption ? "on" : "off", forKey: keyboardKey + "option");
     defaults.set(enableAutomaticTransform ? "on" : "off", forKey: keyboardKey + "automaticTransform");
     defaults.set(paused ? "on" : "off", forKey: keyboardKey + "paused");
 }

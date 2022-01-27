@@ -44,7 +44,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Invert if it's running or not
         paused = !paused
         storeMode()
-        setupMenus()
+        setupMenus()        
+    }
+    
+    @objc func openBug() {
+        let url = URL(string: "https://github.com/PumpedSardines/Tajpi/issues")!
+        NSWorkspace.shared.open(url)
+    }
+    
+    @objc func openNewVersion() {
+        if let url = newVersionFound {
+            let url = URL(string: url)!
+            NSWorkspace.shared.open(url)
+        }
+
     }
     
     func setupMenus() {
@@ -62,18 +75,38 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         menu.addItem(NSMenuItem.separator())
         
+        //============ Application Mode ============
         // Create a button to enable or disable execution
         let runningButton = NSMenuItem(title: locale.running(!paused), action: #selector(onMenuRunningClick), keyEquivalent: "")
         menu.addItem(runningButton)
         
+        let modeButton = NSMenuItem(title: locale.mode(), action: nil, keyEquivalent: "")
+        menu.addItem(modeButton)
+        menu.setSubmenu(modeMenu, for: modeButton)
+        
+        //============ Lower settings menu ============
+        menu.addItem(NSMenuItem.separator())
+        
+        if let url = newVersionFound {
+            let updateButton = NSMenuItem(title: locale.newVersion(), action: #selector(openNewVersion), keyEquivalent: "")
+            menu.addItem(updateButton)
+        }
+        
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        if let appVersion = appVersion {
+            let version = NSMenuItem(title: locale.currentVersion(appVersion), action: nil, keyEquivalent: "")
+            version.isEnabled = false;
+            menu.addItem(version)
+        }
+
+        let bugButton = NSMenuItem(title: locale.foundABug(), action: #selector(openBug), keyEquivalent: "")
+        menu.addItem(bugButton)
+
         let languageButton = NSMenuItem(title: locale.language(), action: nil, keyEquivalent: "")
         menu.addItem(languageButton)
         menu.setSubmenu(localeMenu, for: languageButton)
         
-        let modeButton = NSMenuItem(title: locale.mode(), action: nil, keyEquivalent: "")
-        menu.addItem(modeButton)
-        menu.setSubmenu(modeMenu, for: modeButton)
-
+        
         
         menu.addItem(NSMenuItem.separator())
         

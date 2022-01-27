@@ -16,6 +16,7 @@
 		804948BC27A0463E00370877 /* eng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BB27A0463E00370877 /* eng.swift */; };
 		804948BE27A0478100370877 /* eo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BD27A0478100370877 /* eo.swift */; };
 		804948C027A0499100370877 /* acquirePrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BF27A0499100370877 /* acquirePrivileges.swift */; };
+		806A094927A27AE70005CDD1 /* newVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A094827A27AE70005CDD1 /* newVersion.swift */; };
 		80798BBD27A128D9008D6ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80798BBC27A128D9008D6ED2 /* Assets.xcassets */; };
 		80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80798BBF27A12A67008D6ED2 /* LocaleManager.swift */; };
 		80798BC227A13709008D6ED2 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 80798BC127A13709008D6ED2 /* icon */; };
@@ -35,6 +36,7 @@
 		804948BB27A0463E00370877 /* eng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eng.swift; sourceTree = "<group>"; };
 		804948BD27A0478100370877 /* eo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eo.swift; sourceTree = "<group>"; };
 		804948BF27A0499100370877 /* acquirePrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acquirePrivileges.swift; sourceTree = "<group>"; };
+		806A094827A27AE70005CDD1 /* newVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newVersion.swift; sourceTree = "<group>"; };
 		80798BBC27A128D9008D6ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80798BBF27A12A67008D6ED2 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
 		80798BC127A13709008D6ED2 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				804948A727A03ADA00370877 /* Assets.xcassets */,
 				804948AC27A03ADA00370877 /* tajpi.entitlements */,
 				804948A927A03ADA00370877 /* Preview Content */,
+				806A094827A27AE70005CDD1 /* newVersion.swift */,
 			);
 			path = Tajpi;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				80A4570C27A0652E004E3CC2 /* sv.swift in Sources */,
 				804948BC27A0463E00370877 /* eng.swift in Sources */,
 				804948B927A044FF00370877 /* locale.swift in Sources */,
+				806A094927A27AE70005CDD1 /* newVersion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +341,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
-				MARKETING_VERSION = 1.1.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fritiofrusck.tajpi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -367,8 +371,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
-				MARKETING_VERSION = 1.1.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

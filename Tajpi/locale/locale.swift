@@ -16,4 +16,7 @@ protocol Locale {
     func mode() -> String
     func optionMode() -> String
     func automaticTransformMode() -> String
+    func foundABug() -> String
+    func newVersion() -> String
+    func currentVersion(_ version: String) -> String
 }

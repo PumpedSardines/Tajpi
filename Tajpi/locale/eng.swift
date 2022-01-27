@@ -8,6 +8,18 @@
 import Foundation
 
 class Eng: Locale {
+    func foundABug() -> String {
+        return "Found a bug?"
+    }
+    
+    func newVersion() -> String {
+        return "New version available!"
+    }
+    
+    func currentVersion(_ version: String) -> String {
+        return "Version: " + version;
+    }
+    
     func optionMode() -> String {
         return "Option + key"
     }

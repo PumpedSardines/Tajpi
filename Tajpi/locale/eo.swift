@@ -8,6 +8,18 @@
 import Foundation
 
 class Eo: Locale {
+    func foundABug() -> String {
+        return "Ĉu vi trovis cimon?"
+    }
+    
+    func newVersion() -> String {
+        return "Nova versio disponebla!"
+    }
+    
+    func currentVersion(_ version: String) -> String {
+        return "Versio: " + version;
+    }
+    
     func optionMode() -> String {
         return "Option + butono"
     }

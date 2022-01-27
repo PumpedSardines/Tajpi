@@ -14,9 +14,11 @@ import SwiftUI
 let app = NSApplication.shared
 
 LocaleManager.`init`()
-startKeyboardProcess();
+//startKeyboardProcess();
 
 let delegate = AppDelegate()
 app.delegate = delegate
+newVersion();
 
 _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
+
