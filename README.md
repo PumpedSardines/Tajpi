@@ -9,7 +9,7 @@ A macos clone of the windows program [Tajpi](http://www.zz9pza.net/tajpi/en/). T
     * [Modes](#modes)
 * [Possible problems](#possible-problems)
 ## Download
-Download the [latest release](https://github.com/PumpedSardines/Tajpi/releases/tag/1.0.1) from this GitHub. To run this application you need to follow [these steps](https://support.apple.com/en-ph/guide/mac-help/mh40616/mac) for allowing execution. 
+Download the [latest release](https://github.com/PumpedSardines/Tajpi/releases/tag/1.1.0) from this GitHub. To run this application you need to follow [these steps](https://support.apple.com/en-ph/guide/mac-help/mh40616/mac) for allowing execution. 
 ### Give Accessibility access
 After running the program you will need to open System Preferences and go to *Security & Privacy > Accessibility*. Click the lock in the bottom left to make changes. 
 
