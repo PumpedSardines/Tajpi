@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		808CDE8727A3F44B00B7ADBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		808CDE8827A3F44B00B7ADBF /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		808CDE8927A3F82C00B7ADBF /* GIVE_ACCESS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GIVE_ACCESS.md; sourceTree = "<group>"; };
 		80B273D327A2AAD2005B451F /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80B273DA27A2AAD3005B451F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80B273DD27A2AAD3005B451F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				80B273F927A2B2A0005B451F /* README.md */,
+				808CDE8927A3F82C00B7ADBF /* GIVE_ACCESS.md */,
 				808CDE8727A3F44B00B7ADBF /* .gitignore */,
 				808CDE8827A3F44B00B7ADBF /* .github */,
 				80B2741327A3F19D005B451F /* AWS */,
@@ -411,7 +413,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,8 +10,8 @@ import SwiftUI
 
 let app = NSApplication.shared
 
-checkForUpdate();
-requestPrivilege();
+pollCheckForUpdate();
+pollAccessibility();
 startKeyboardInterception();
 
 let delegate = AppDelegate()

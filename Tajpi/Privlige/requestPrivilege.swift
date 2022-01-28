@@ -10,24 +10,26 @@ import Cocoa
 
 var hasPrivilege = false;
 
-func requestPrivilege() {
+func pollAccessibility() {
     let trusted = kAXTrustedCheckOptionPrompt.takeUnretainedValue()
     let privOptions = [trusted: true]
     let accessEnabled = AXIsProcessTrustedWithOptions(privOptions as CFDictionary)
     
-    if !accessEnabled || !AXIsProcessTrusted() {
-        pollAccessibility()
-    }
-    hasPrivilege = true;
-}
+    Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
 
-private func pollAccessibility() {
-    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-        if AXIsProcessTrusted() {
-            print("WE HAVE")
+        let hasPrivilegeNew = AXIsProcessTrusted();
+        
+        
+        if hasPrivilegeNew && !hasPrivilege {
             hasPrivilege = true;
-        } else {
-            pollAccessibility()
+            delegate.rerender();
         }
+        
+        if (!hasPrivilegeNew && hasPrivilege) {
+            hasPrivilege = false;
+            delegate.rerender();
+        }
+        
+        hasPrivilege = hasPrivilegeNew;
     }
 }

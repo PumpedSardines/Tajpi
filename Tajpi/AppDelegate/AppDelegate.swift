@@ -22,11 +22,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = img
         }
         
-        setupMenus()
-        
-        onNewUpdate {
-            self.setupMenus()
-        }
+        rerender()
+    }
+    
+    func rerender() {
+        setupMenus();
     }
     
     func applicationWillTerminate(_ notification: Notification) {
@@ -40,6 +40,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Invert if it's running or not
         paused.change(!paused.value)
         setupMenus()
+    }
+    
+    @objc func fixNoAccessibility() {
+        let url = URL(string: "https://github.com/PumpedSardines/Tajpi/blob/main/GIVE_ACCESS.md")!
+        NSWorkspace.shared.open(url)
     }
     
     @objc func openBug() {
@@ -56,27 +61,40 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func setupMenus() {
+        
         // Create the menu
         let menu = NSMenu()
         menu.autoenablesItems = false // This i needed for isEnabled to work
-        let localeMenu = getLocaleMenu();
-        let modeMenu = getModeMenu();
         
-        // Create a info text that diplays current status
-        let info = NSMenuItem(title: locale.value.state(paused: paused.value), action: nil, keyEquivalent: "")
-        info.isEnabled = false
-        menu.addItem(info)
         
-        menu.addItem(NSMenuItem.separator())
-        
-        //============ Application Mode ============
-        // Create a button to enable or disable execution
-        let runningButton = NSMenuItem(title: locale.value.changeState(paused: paused.value), action: #selector(onMenuRunningClick), keyEquivalent: "")
-        menu.addItem(runningButton)
-        
-        let modeButton = NSMenuItem(title: locale.value.modes(), action: nil, keyEquivalent: "")
-        menu.addItem(modeButton)
-        menu.setSubmenu(modeMenu, for: modeButton)
+        if(!hasPrivilege) {
+            let infoButton = NSMenuItem(title: locale.value.missingPermissions(), action: nil, keyEquivalent: "")
+            infoButton.isEnabled = false
+            
+            let fixButton = NSMenuItem(title: locale.value.fixMissingPermisions(), action: #selector(fixNoAccessibility), keyEquivalent: "")
+            
+            menu.addItem(infoButton)
+            menu.addItem(fixButton)
+            
+            statusItem.menu = menu;
+        } else {
+            let modeMenu = getModeMenu();
+            
+            // Create a info text that diplays current status
+            let info = NSMenuItem(title: locale.value.state(paused: paused.value), action: nil, keyEquivalent: "")
+            info.isEnabled = false
+            menu.addItem(info)
+            
+            menu.addItem(NSMenuItem.separator())
+            
+            let runningButton = NSMenuItem(title: locale.value.changeState(paused: paused.value), action: #selector(onMenuRunningClick), keyEquivalent: "")
+            menu.addItem(runningButton)
+            
+            let modeButton = NSMenuItem(title: locale.value.modes(), action: nil, keyEquivalent: "")
+            menu.addItem(modeButton)
+            menu.setSubmenu(modeMenu, for: modeButton)
+        }
+
         
         //============ Lower settings menu ============
         menu.addItem(NSMenuItem.separator())
@@ -96,6 +114,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let bugButton = NSMenuItem(title: locale.value.foundABug(), action: #selector(openBug), keyEquivalent: "")
         menu.addItem(bugButton)
 
+        let localeMenu = getLocaleMenu();
         let languageButton = NSMenuItem(title: locale.value.changeLanguage(), action: nil, keyEquivalent: "")
         menu.addItem(languageButton)
         menu.setSubmenu(localeMenu, for: languageButton)

@@ -8,6 +8,14 @@
 import Foundation
 
 struct Esperanto: Locale {
+    func missingPermissions() -> String {
+        return "Tajpi ne povas kuri pro manko de permesoj";
+    }
+    
+    func fixMissingPermisions() -> String {
+        return "Instrukcioj por ripari permesojn";
+    }
+    
     var name: String = "Esperanto";
     
     func state(paused: Bool) -> String {
@@ -39,7 +47,7 @@ struct Esperanto: Locale {
     }
     
     func foundABug() -> String {
-        return "Trovis cimon?"
+        return "Chu vi trovis cimon?"
     }
     
     func changeLanguage() -> String {

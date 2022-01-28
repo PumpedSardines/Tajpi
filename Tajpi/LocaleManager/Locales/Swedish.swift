@@ -8,6 +8,14 @@
 import Foundation
 
 struct Swedish: Locale {
+    func missingPermissions() -> String {
+        return "Tajpi kan inte köras på grund av bristande behörigheter"
+    }
+    
+    func fixMissingPermisions() -> String {
+        return "Instruktioner för att fixa behörigheter"
+    }
+    
     var name: String = "Svenska";
     
     func state(paused: Bool) -> String {

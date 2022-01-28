@@ -16,7 +16,6 @@ var option = BoolState(id: "keyboard.option", value: true);
 var automaticTransform = BoolState(id: "keyboard.automaticTransform", value: false);
 
 
-
 func startKeyboardInterception() {
     // This code is hard to understand, and that's because these low level api's are often very confusing
     // What this function does is starting an "event listener" which listens for keypress events

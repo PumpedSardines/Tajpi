@@ -23,4 +23,7 @@ protocol Locale {
      func changeLanguage() -> String;
     
      func quit() -> String;
+    
+    func missingPermissions() -> String;
+    func fixMissingPermisions() -> String;
 }
