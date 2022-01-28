@@ -72,8 +72,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             menu.addItem(infoButton)
             menu.addItem(fixButton)
-            
-            statusItem.menu = menu;
         } else {
             let modeMenu = getModeMenu();
             

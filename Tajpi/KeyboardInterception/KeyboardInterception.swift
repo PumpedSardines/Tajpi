@@ -20,7 +20,6 @@ private var loopSource: CFRunLoopSource? = nil;
 private var eventTap: CFMachPort? = nil;
 
 func startKeyboardInterception() -> Bool {
-
     // This code is hard to understand, and that's because these low level api's are often very confusing
     // What this function does is starting an "event listener" which listens for keypress events
     // If it can't do that it'll start a DispatchQueue and try again 300 miliseconds later
@@ -51,7 +50,6 @@ func startKeyboardInterception() -> Bool {
 }
 
 func stopKeyboardInterception() {
-
     if let port = eventTap {
         CGEvent.tapEnable(tap: port, enable: false)
     }

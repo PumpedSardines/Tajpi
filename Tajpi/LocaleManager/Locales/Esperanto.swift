@@ -47,11 +47,11 @@ struct Esperanto: Locale {
     }
     
     func foundABug() -> String {
-        return "Chu vi trovis cimon?"
+        return "Ĉu vi trovis cimon?"
     }
     
     func changeLanguage() -> String {
-        return "Ŝanĝi lingvon";
+        return "Ŝanĝu la lingvon";
     }
     
     func quit() -> String {
