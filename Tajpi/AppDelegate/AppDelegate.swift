@@ -24,6 +24,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         setupMenus()
         
+        onNewUpdate {
+            self.setupMenus()
+        }
     }
     
     func applicationWillTerminate(_ notification: Notification) {
