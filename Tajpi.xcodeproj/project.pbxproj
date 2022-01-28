@@ -7,44 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		803AE81F27A0901F00DA069A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803AE81E27A0901F00DA069A /* Keyboard.swift */; };
-		804948A427A03AD900370877 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948A327A03AD900370877 /* AppDelegate.swift */; };
-		804948A827A03ADA00370877 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948A727A03ADA00370877 /* Assets.xcassets */; };
-		804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 804948AA27A03ADA00370877 /* Preview Assets.xcassets */; };
-		804948B327A03B2900370877 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948B227A03B2900370877 /* main.swift */; };
-		804948B927A044FF00370877 /* locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948B827A044FF00370877 /* locale.swift */; };
-		804948BC27A0463E00370877 /* eng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BB27A0463E00370877 /* eng.swift */; };
-		804948BE27A0478100370877 /* eo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BD27A0478100370877 /* eo.swift */; };
-		804948C027A0499100370877 /* acquirePrivileges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804948BF27A0499100370877 /* acquirePrivileges.swift */; };
-		806A094927A27AE70005CDD1 /* newVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806A094827A27AE70005CDD1 /* newVersion.swift */; };
-		80798BBD27A128D9008D6ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80798BBC27A128D9008D6ED2 /* Assets.xcassets */; };
-		80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80798BBF27A12A67008D6ED2 /* LocaleManager.swift */; };
-		80798BC227A13709008D6ED2 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 80798BC127A13709008D6ED2 /* icon */; };
-		80A4570C27A0652E004E3CC2 /* sv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A4570B27A0652E004E3CC2 /* sv.swift */; };
+		80B273DB27A2AAD3005B451F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B273DA27A2AAD3005B451F /* Assets.xcassets */; };
+		80B273DE27A2AAD3005B451F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80B273DD27A2AAD3005B451F /* Preview Assets.xcassets */; };
+		80B273E627A2AD07005B451F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273E527A2AD07005B451F /* main.swift */; };
+		80B273EA27A2ADD5005B451F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80B273E927A2ADD5005B451F /* Info.plist */; };
+		80B273ED27A2AF36005B451F /* LocaleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273EC27A2AF36005B451F /* LocaleState.swift */; };
+		80B273F027A2AF68005B451F /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273EF27A2AF68005B451F /* Locale.swift */; };
+		80B273F527A2B163005B451F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273F427A2B163005B451F /* AppDelegate.swift */; };
+		80B273F827A2B231005B451F /* KeyboardInterception.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273F727A2B231005B451F /* KeyboardInterception.swift */; };
+		80B273FC27A2B33F005B451F /* requestPrivilege.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273FB27A2B33F005B451F /* requestPrivilege.swift */; };
+		80B273FF27A2B46F005B451F /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B273FE27A2B46F005B451F /* State.swift */; };
+		80B2740127A2B6F0005B451F /* BoolState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740027A2B6F0005B451F /* BoolState.swift */; };
+		80B2740527A2BA74005B451F /* keyboardCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740427A2BA74005B451F /* keyboardCallback.swift */; };
+		80B2740727A2BC1B005B451F /* replaceCombination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740627A2BC1B005B451F /* replaceCombination.swift */; };
+		80B2740927A2BCBA005B451F /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740827A2BCBA005B451F /* KeyCodes.swift */; };
+		80B2740B27A2C0B4005B451F /* English.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740A27A2C0B4005B451F /* English.swift */; };
+		80B2740E27A3E4B4005B451F /* checkForUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740D27A3E4B4005B451F /* checkForUpdate.swift */; };
+		80B2741027A3E95F005B451F /* Esperanto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2740F27A3E95F005B451F /* Esperanto.swift */; };
+		80B2741227A3E97E005B451F /* Swedish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B2741127A3E97E005B451F /* Swedish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		803AE81E27A0901F00DA069A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
-		804948A027A03AD900370877 /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		804948A327A03AD900370877 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		804948A727A03ADA00370877 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		804948AA27A03ADA00370877 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		804948AC27A03ADA00370877 /* tajpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tajpi.entitlements; sourceTree = "<group>"; };
-		804948B227A03B2900370877 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		804948B427A03CA000370877 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		804948B827A044FF00370877 /* locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locale.swift; sourceTree = "<group>"; };
-		804948BB27A0463E00370877 /* eng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eng.swift; sourceTree = "<group>"; };
-		804948BD27A0478100370877 /* eo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eo.swift; sourceTree = "<group>"; };
-		804948BF27A0499100370877 /* acquirePrivileges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = acquirePrivileges.swift; sourceTree = "<group>"; };
-		806A094827A27AE70005CDD1 /* newVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newVersion.swift; sourceTree = "<group>"; };
-		80798BBC27A128D9008D6ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		80798BBF27A12A67008D6ED2 /* LocaleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleManager.swift; sourceTree = "<group>"; };
-		80798BC127A13709008D6ED2 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
-		80A4570B27A0652E004E3CC2 /* sv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv.swift; sourceTree = "<group>"; };
+		808CDE8727A3F44B00B7ADBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		808CDE8827A3F44B00B7ADBF /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
+		80B273D327A2AAD2005B451F /* Tajpi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tajpi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80B273DA27A2AAD3005B451F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80B273DD27A2AAD3005B451F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80B273DF27A2AAD3005B451F /* Tajpi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tajpi.entitlements; sourceTree = "<group>"; };
+		80B273E527A2AD07005B451F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		80B273E927A2ADD5005B451F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80B273EC27A2AF36005B451F /* LocaleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleState.swift; sourceTree = "<group>"; };
+		80B273EF27A2AF68005B451F /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
+		80B273F427A2B163005B451F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80B273F727A2B231005B451F /* KeyboardInterception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInterception.swift; sourceTree = "<group>"; };
+		80B273F927A2B2A0005B451F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		80B273FB27A2B33F005B451F /* requestPrivilege.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPrivilege.swift; sourceTree = "<group>"; };
+		80B273FE27A2B46F005B451F /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		80B2740027A2B6F0005B451F /* BoolState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolState.swift; sourceTree = "<group>"; };
+		80B2740427A2BA74005B451F /* keyboardCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardCallback.swift; sourceTree = "<group>"; };
+		80B2740627A2BC1B005B451F /* replaceCombination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = replaceCombination.swift; sourceTree = "<group>"; };
+		80B2740827A2BCBA005B451F /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
+		80B2740A27A2C0B4005B451F /* English.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = English.swift; sourceTree = "<group>"; };
+		80B2740D27A3E4B4005B451F /* checkForUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkForUpdate.swift; sourceTree = "<group>"; };
+		80B2740F27A3E95F005B451F /* Esperanto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esperanto.swift; sourceTree = "<group>"; };
+		80B2741127A3E97E005B451F /* Swedish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swedish.swift; sourceTree = "<group>"; };
+		80B2741427A3F1B8005B451F /* version */ = {isa = PBXFileReference; lastKnownFileType = text; path = version; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8049489D27A03AD900370877 /* Frameworks */ = {
+		80B273D027A2AAD2005B451F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,105 +65,160 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8049489727A03AD900370877 = {
+		80B273CA27A2AAD2005B451F = {
 			isa = PBXGroup;
 			children = (
-				80798BBE27A1290C008D6ED2 /* Assets */,
-				804948A227A03AD900370877 /* Tajpi */,
-				804948A127A03AD900370877 /* Products */,
+				80B273F927A2B2A0005B451F /* README.md */,
+				808CDE8727A3F44B00B7ADBF /* .gitignore */,
+				808CDE8827A3F44B00B7ADBF /* .github */,
+				80B2741327A3F19D005B451F /* AWS */,
+				80B273D527A2AAD2005B451F /* Tajpi */,
+				80B273D427A2AAD2005B451F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		804948A127A03AD900370877 /* Products */ = {
+		80B273D427A2AAD2005B451F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				804948A027A03AD900370877 /* Tajpi.app */,
+				80B273D327A2AAD2005B451F /* Tajpi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		804948A227A03AD900370877 /* Tajpi */ = {
+		80B273D527A2AAD2005B451F /* Tajpi */ = {
 			isa = PBXGroup;
 			children = (
-				80798BBC27A128D9008D6ED2 /* Assets.xcassets */,
-				804948BA27A0462E00370877 /* locale */,
-				804948A327A03AD900370877 /* AppDelegate.swift */,
-				804948B227A03B2900370877 /* main.swift */,
-				804948BF27A0499100370877 /* acquirePrivileges.swift */,
-				80798BBF27A12A67008D6ED2 /* LocaleManager.swift */,
-				803AE81E27A0901F00DA069A /* Keyboard.swift */,
-				804948B427A03CA000370877 /* Info.plist */,
-				804948A727A03ADA00370877 /* Assets.xcassets */,
-				804948AC27A03ADA00370877 /* tajpi.entitlements */,
-				804948A927A03ADA00370877 /* Preview Content */,
-				806A094827A27AE70005CDD1 /* newVersion.swift */,
+				80B273E927A2ADD5005B451F /* Info.plist */,
+				80B273DA27A2AAD3005B451F /* Assets.xcassets */,
+				80B273DF27A2AAD3005B451F /* Tajpi.entitlements */,
+				80B273E527A2AD07005B451F /* main.swift */,
+				80B2740C27A3E499005B451F /* CheckForUpdate */,
+				80B273FD27A2B45D005B451F /* State */,
+				80B273FA27A2B328005B451F /* Privlige */,
+				80B273F327A2B14C005B451F /* AppDelegate */,
+				80B273EB27A2AF1B005B451F /* LocaleManager */,
+				80B273F627A2B1D3005B451F /* KeyboardInterception */,
+				80B273DC27A2AAD3005B451F /* Preview Content */,
 			);
 			path = Tajpi;
 			sourceTree = "<group>";
 		};
-		804948A927A03ADA00370877 /* Preview Content */ = {
+		80B273DC27A2AAD3005B451F /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				804948AA27A03ADA00370877 /* Preview Assets.xcassets */,
+				80B273DD27A2AAD3005B451F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		804948BA27A0462E00370877 /* locale */ = {
+		80B273EB27A2AF1B005B451F /* LocaleManager */ = {
 			isa = PBXGroup;
 			children = (
-				804948B827A044FF00370877 /* locale.swift */,
-				804948BB27A0463E00370877 /* eng.swift */,
-				804948BD27A0478100370877 /* eo.swift */,
-				80A4570B27A0652E004E3CC2 /* sv.swift */,
+				80B273EE27A2AF59005B451F /* Locales */,
+				80B273EC27A2AF36005B451F /* LocaleState.swift */,
 			);
-			path = locale;
+			path = LocaleManager;
 			sourceTree = "<group>";
 		};
-		80798BBE27A1290C008D6ED2 /* Assets */ = {
+		80B273EE27A2AF59005B451F /* Locales */ = {
 			isa = PBXGroup;
 			children = (
-				80798BC127A13709008D6ED2 /* icon */,
+				80B273EF27A2AF68005B451F /* Locale.swift */,
+				80B2740A27A2C0B4005B451F /* English.swift */,
+				80B2740F27A3E95F005B451F /* Esperanto.swift */,
+				80B2741127A3E97E005B451F /* Swedish.swift */,
 			);
-			path = Assets;
+			path = Locales;
+			sourceTree = "<group>";
+		};
+		80B273F327A2B14C005B451F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				80B273F427A2B163005B451F /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		80B273F627A2B1D3005B451F /* KeyboardInterception */ = {
+			isa = PBXGroup;
+			children = (
+				80B273F727A2B231005B451F /* KeyboardInterception.swift */,
+				80B2740427A2BA74005B451F /* keyboardCallback.swift */,
+				80B2740627A2BC1B005B451F /* replaceCombination.swift */,
+				80B2740827A2BCBA005B451F /* KeyCodes.swift */,
+			);
+			path = KeyboardInterception;
+			sourceTree = "<group>";
+		};
+		80B273FA27A2B328005B451F /* Privlige */ = {
+			isa = PBXGroup;
+			children = (
+				80B273FB27A2B33F005B451F /* requestPrivilege.swift */,
+			);
+			path = Privlige;
+			sourceTree = "<group>";
+		};
+		80B273FD27A2B45D005B451F /* State */ = {
+			isa = PBXGroup;
+			children = (
+				80B2740027A2B6F0005B451F /* BoolState.swift */,
+				80B273FE27A2B46F005B451F /* State.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		80B2740C27A3E499005B451F /* CheckForUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				80B2740D27A3E4B4005B451F /* checkForUpdate.swift */,
+			);
+			path = CheckForUpdate;
+			sourceTree = "<group>";
+		};
+		80B2741327A3F19D005B451F /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				80B2741427A3F1B8005B451F /* version */,
+			);
+			path = AWS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8049489F27A03AD900370877 /* Tajpi */ = {
+		80B273D227A2AAD2005B451F /* Tajpi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "Tajpi" */;
+			buildConfigurationList = 80B273E227A2AAD3005B451F /* Build configuration list for PBXNativeTarget "Tajpi" */;
 			buildPhases = (
-				8049489C27A03AD900370877 /* Sources */,
-				8049489D27A03AD900370877 /* Frameworks */,
-				8049489E27A03AD900370877 /* Resources */,
+				80B273CF27A2AAD2005B451F /* Sources */,
+				80B273D027A2AAD2005B451F /* Frameworks */,
+				80B273D127A2AAD2005B451F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Tajpi;
-			productName = tajpi;
-			productReference = 804948A027A03AD900370877 /* Tajpi.app */;
+			productName = Tajpi;
+			productReference = 80B273D327A2AAD2005B451F /* Tajpi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8049489827A03AD900370877 /* Project object */ = {
+		80B273CB27A2AAD2005B451F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					8049489F27A03AD900370877 = {
+					80B273D227A2AAD2005B451F = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 8049489B27A03AD900370877 /* Build configuration list for PBXProject "Tajpi" */;
+			buildConfigurationList = 80B273CE27A2AAD2005B451F /* Build configuration list for PBXProject "Tajpi" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,52 +226,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 8049489727A03AD900370877;
-			productRefGroup = 804948A127A03AD900370877 /* Products */;
+			mainGroup = 80B273CA27A2AAD2005B451F;
+			productRefGroup = 80B273D427A2AAD2005B451F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8049489F27A03AD900370877 /* Tajpi */,
+				80B273D227A2AAD2005B451F /* Tajpi */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8049489E27A03AD900370877 /* Resources */ = {
+		80B273D127A2AAD2005B451F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				804948AB27A03ADA00370877 /* Preview Assets.xcassets in Resources */,
-				80798BC227A13709008D6ED2 /* icon in Resources */,
-				804948A827A03ADA00370877 /* Assets.xcassets in Resources */,
-				80798BBD27A128D9008D6ED2 /* Assets.xcassets in Resources */,
+				80B273DE27A2AAD3005B451F /* Preview Assets.xcassets in Resources */,
+				80B273DB27A2AAD3005B451F /* Assets.xcassets in Resources */,
+				80B273EA27A2ADD5005B451F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8049489C27A03AD900370877 /* Sources */ = {
+		80B273CF27A2AAD2005B451F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80798BC027A12A67008D6ED2 /* LocaleManager.swift in Sources */,
-				804948B327A03B2900370877 /* main.swift in Sources */,
-				804948A427A03AD900370877 /* AppDelegate.swift in Sources */,
-				803AE81F27A0901F00DA069A /* Keyboard.swift in Sources */,
-				804948C027A0499100370877 /* acquirePrivileges.swift in Sources */,
-				804948BE27A0478100370877 /* eo.swift in Sources */,
-				80A4570C27A0652E004E3CC2 /* sv.swift in Sources */,
-				804948BC27A0463E00370877 /* eng.swift in Sources */,
-				804948B927A044FF00370877 /* locale.swift in Sources */,
-				806A094927A27AE70005CDD1 /* newVersion.swift in Sources */,
+				80B2740927A2BCBA005B451F /* KeyCodes.swift in Sources */,
+				80B2741027A3E95F005B451F /* Esperanto.swift in Sources */,
+				80B273F827A2B231005B451F /* KeyboardInterception.swift in Sources */,
+				80B2741227A3E97E005B451F /* Swedish.swift in Sources */,
+				80B273F027A2AF68005B451F /* Locale.swift in Sources */,
+				80B2740B27A2C0B4005B451F /* English.swift in Sources */,
+				80B2740727A2BC1B005B451F /* replaceCombination.swift in Sources */,
+				80B273FC27A2B33F005B451F /* requestPrivilege.swift in Sources */,
+				80B273F527A2B163005B451F /* AppDelegate.swift in Sources */,
+				80B273E627A2AD07005B451F /* main.swift in Sources */,
+				80B2740527A2BA74005B451F /* keyboardCallback.swift in Sources */,
+				80B273ED27A2AF36005B451F /* LocaleState.swift in Sources */,
+				80B2740E27A3E4B4005B451F /* checkForUpdate.swift in Sources */,
+				80B273FF27A2B46F005B451F /* State.swift in Sources */,
+				80B2740127A2B6F0005B451F /* BoolState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		804948AD27A03ADA00370877 /* Debug */ = {
+		80B273E027A2AAD3005B451F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +336,7 @@
 			};
 			name = Debug;
 		};
-		804948AE27A03ADA00370877 /* Release */ = {
+		80B273E127A2AAD3005B451F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -320,62 +390,61 @@
 			};
 			name = Release;
 		};
-		804948B027A03ADA00370877 /* Debug */ = {
+		80B273E327A2AAD3005B451F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = tajpi/tajpi.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = Tajpi/Tajpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"tajpi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Tajpi/Preview Content\"";
 				DEVELOPMENT_TEAM = EKBJFR3MTZ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = tajpi/Info.plist;
+				INFOPLIST_FILE = Tajpi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fritiofrusck.tajpi;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		804948B127A03ADA00370877 /* Release */ = {
+		80B273E427A2AAD3005B451F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = tajpi/tajpiRelease.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = Tajpi/Tajpi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"tajpi/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Tajpi/Preview Content\"";
 				DEVELOPMENT_TEAM = EKBJFR3MTZ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = tajpi/Info.plist;
+				INFOPLIST_FILE = Tajpi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.1.1;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -384,25 +453,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8049489B27A03AD900370877 /* Build configuration list for PBXProject "Tajpi" */ = {
+		80B273CE27A2AAD2005B451F /* Build configuration list for PBXProject "Tajpi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				804948AD27A03ADA00370877 /* Debug */,
-				804948AE27A03ADA00370877 /* Release */,
+				80B273E027A2AAD3005B451F /* Debug */,
+				80B273E127A2AAD3005B451F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		804948AF27A03ADA00370877 /* Build configuration list for PBXNativeTarget "Tajpi" */ = {
+		80B273E227A2AAD3005B451F /* Build configuration list for PBXNativeTarget "Tajpi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				804948B027A03ADA00370877 /* Debug */,
-				804948B127A03ADA00370877 /* Release */,
+				80B273E327A2AAD3005B451F /* Debug */,
+				80B273E427A2AAD3005B451F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8049489827A03AD900370877 /* Project object */;
+	rootObject = 80B273CB27A2AAD2005B451F /* Project object */;
 }

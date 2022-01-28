@@ -10,9 +10,7 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     var statusItem: NSStatusItem!
-    var globalObserver: Any!
-    var localObserver: Any!
-    
+    var locale = LocaleState(id: "locale", value: English());
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Init Keyboard
@@ -26,11 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         setupMenus()
         
-        // If the language is changed, update the menu
-        LocaleManager.onChange {
-            self.setupMenus()
-        }
-        
     }
     
     func applicationWillTerminate(_ notification: Notification) {
@@ -42,9 +35,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func onMenuRunningClick() {
         // Invert if it's running or not
-        paused = !paused
-        storeMode()
-        setupMenus()        
+        paused.change(!paused.value)
+        setupMenus()
     }
     
     @objc func openBug() {
@@ -53,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func openNewVersion() {
-        if let url = newVersionFound {
+        if let url = newVersion {
             let url = URL(string: url)!
             NSWorkspace.shared.open(url)
         }
@@ -66,10 +58,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.autoenablesItems = false // This i needed for isEnabled to work
         let localeMenu = getLocaleMenu();
         let modeMenu = getModeMenu();
-        let locale = LocaleManager.locale
         
         // Create a info text that diplays current status
-        let info = NSMenuItem(title: locale.info(!paused), action: nil, keyEquivalent: "")
+        let info = NSMenuItem(title: locale.value.state(paused: paused.value), action: nil, keyEquivalent: "")
         info.isEnabled = false
         menu.addItem(info)
         
@@ -77,32 +68,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //============ Application Mode ============
         // Create a button to enable or disable execution
-        let runningButton = NSMenuItem(title: locale.running(!paused), action: #selector(onMenuRunningClick), keyEquivalent: "")
+        let runningButton = NSMenuItem(title: locale.value.changeState(paused: paused.value), action: #selector(onMenuRunningClick), keyEquivalent: "")
         menu.addItem(runningButton)
         
-        let modeButton = NSMenuItem(title: locale.mode(), action: nil, keyEquivalent: "")
+        let modeButton = NSMenuItem(title: locale.value.modes(), action: nil, keyEquivalent: "")
         menu.addItem(modeButton)
         menu.setSubmenu(modeMenu, for: modeButton)
         
         //============ Lower settings menu ============
         menu.addItem(NSMenuItem.separator())
         
-        if let url = newVersionFound {
-            let updateButton = NSMenuItem(title: locale.newVersion(), action: #selector(openNewVersion), keyEquivalent: "")
+        if let url = newVersion {
+            let updateButton = NSMenuItem(title: locale.value.updateAvailable(), action: #selector(openNewVersion), keyEquivalent: "")
             menu.addItem(updateButton)
         }
         
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         if let appVersion = appVersion {
-            let version = NSMenuItem(title: locale.currentVersion(appVersion), action: nil, keyEquivalent: "")
+            let version = NSMenuItem(title: locale.value.currentVersion(version: appVersion), action: nil, keyEquivalent: "")
             version.isEnabled = false;
             menu.addItem(version)
         }
 
-        let bugButton = NSMenuItem(title: locale.foundABug(), action: #selector(openBug), keyEquivalent: "")
+        let bugButton = NSMenuItem(title: locale.value.foundABug(), action: #selector(openBug), keyEquivalent: "")
         menu.addItem(bugButton)
 
-        let languageButton = NSMenuItem(title: locale.language(), action: nil, keyEquivalent: "")
+        let languageButton = NSMenuItem(title: locale.value.changeLanguage(), action: nil, keyEquivalent: "")
         menu.addItem(languageButton)
         menu.setSubmenu(localeMenu, for: languageButton)
         
@@ -111,92 +102,84 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(NSMenuItem.separator())
         
         // Add a quit button
-        menu.addItem(NSMenuItem(title: locale.quit(), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: locale.value.quit(), action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         
         
         statusItem.menu = menu
     }
     
-    @objc func setLanguageEng() {
-        LocaleManager.updateLocale(locale: Eng())
+    @objc func setLanguageEnglish() {
+        locale.change(English())
+        setupMenus()
     }
     
-    @objc func setLanguageEo() {
-        LocaleManager.updateLocale(locale: Eo())
+    @objc func setLanguageEsperanto() {
+        locale.change(Esperanto())
+        setupMenus()
     }
     
-    @objc func setLanguageSv() {
-        LocaleManager.updateLocale(locale: Sv())
+    @objc func setLanguageSwedish() {
+        locale.change(Swedish())
+        setupMenus()
     }
     
     func getLocaleMenu() -> NSMenu {
         let menu = NSMenu();
         menu.autoenablesItems = true
         
+        let languages = [
+            // Language, function to switch, if it's selected
+            (English(),  #selector(setLanguageEnglish), locale.value is English),
+            (Esperanto(),  #selector(setLanguageEsperanto), locale.value is Esperanto),
+            (Swedish(),  #selector(setLanguageSwedish), locale.value is Swedish),
+        ] as [(Locale, Selector, Bool)];
         
-        // Init eng button
-        let eng = NSMenuItem(title: Eng.name(), action: #selector(setLanguageEng) , keyEquivalent: "")
-        eng.isEnabled = true;
-        eng.state = .off
-        if(LocaleManager.locale is Eng) {
-            eng.state = .on
+        
+        
+        for language in languages {
+            // Init English button
+            let btn = NSMenuItem(title: language.0.name, action: language.1, keyEquivalent: "")
+            btn.isEnabled = true;
+            btn.state = .off
+            if(language.2) {
+                btn.state = .on
+            }
+            menu.addItem(btn);
         }
-        
-        // Init eo button
-        let eo = NSMenuItem(title: Eo.name(), action: #selector(setLanguageEo) , keyEquivalent: "")
-        eo.state = .off
-        if(LocaleManager.locale is Eo) {
-            eo.state = .on
-        }
-        
-        // Init eng button
-        let sv = NSMenuItem(title: Sv.name(), action: #selector(setLanguageSv) , keyEquivalent: "")
-        sv.state = .off
-        if(LocaleManager.locale is Sv) {
-            sv.state = .on
-        }
-        
-        menu.addItem(eo);
-        menu.addItem(eng);
-        menu.addItem(sv);
         
         return menu
     }
     
     @objc func setOptionMode() {
-        enableOption = !enableOption;
+        option.change(!option.value);
         setupMenus()
-        storeMode()
     }
     
     @objc func setAutomaticTransformMode() {
-        enableAutomaticTransform = !enableAutomaticTransform;
+        automaticTransform.change(!automaticTransform.value);
         setupMenus()
-        storeMode()
     }
     
     func getModeMenu() -> NSMenu {
-        let locale = LocaleManager.locale
         let menu = NSMenu();
         menu.autoenablesItems = true
         
-        
         // Init eng button
-        let option = NSMenuItem(title: locale.optionMode(), action: #selector(setOptionMode) , keyEquivalent: "")
-        option.state = .off
-        if(enableOption) {
-            option.state = .on
+        let optionButton = NSMenuItem(title: locale.value.modeOption(), action: #selector(setOptionMode) , keyEquivalent: "")
+        optionButton.state = .off
+        if(option.value) {
+            optionButton.state = .on
         }
         
         // Init eo button
-        let automaticTransform = NSMenuItem(title: locale.automaticTransformMode(), action: #selector(setAutomaticTransformMode) , keyEquivalent: "")
-        automaticTransform.state = .off
-        if(enableAutomaticTransform) {
-            automaticTransform.state = .on
+        let automaticTransformButton = NSMenuItem(title: locale.value.modeAutomaticTransform(), action: #selector(setAutomaticTransformMode) , keyEquivalent: "")
+        automaticTransformButton.state = .off
+        if(automaticTransform.value) {
+            automaticTransformButton.state = .on
         }
         
-        menu.addItem(option);
-        menu.addItem(automaticTransform);
+        menu.addItem(optionButton);
+        menu.addItem(automaticTransformButton);
         
         return menu
     }
