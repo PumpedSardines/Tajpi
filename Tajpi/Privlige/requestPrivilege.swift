@@ -7,6 +7,8 @@
 
 import Foundation
 import Cocoa
+import CoreGraphics
+import Dispatch
 
 var hasPrivilege = false;
 
@@ -15,18 +17,20 @@ func pollAccessibility() {
     let privOptions = [trusted: true]
     let accessEnabled = AXIsProcessTrustedWithOptions(privOptions as CFDictionary)
     
-    Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { timer in
-
+    Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { (t) in
         let hasPrivilegeNew = AXIsProcessTrusted();
-        
+        print(hasPrivilegeNew);
         
         if hasPrivilegeNew && !hasPrivilege {
             hasPrivilege = true;
+            let worked = startKeyboardInterception();
+            print(worked)
             delegate.rerender();
         }
         
         if (!hasPrivilegeNew && hasPrivilege) {
             hasPrivilege = false;
+            stopKeyboardInterception();
             delegate.rerender();
         }
         

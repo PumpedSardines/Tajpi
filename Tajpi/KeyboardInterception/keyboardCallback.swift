@@ -18,6 +18,12 @@ struct KeyboardStatus {
 // This is the Callback function for keystrokes
 func keyboardCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEvent, refcon : UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
     
+    if type == .tapDisabledByTimeout || type == .tapDisabledByUserInput {
+        print("DISABLE");
+        //CGEvent.tapEnable(tap: eventTap!, enable: true)
+        return Unmanaged.passRetained(event)
+    }
+    
     // If either option or shift was pressed down
     if type == .flagsChanged {
         if let e = NSEvent(cgEvent: event) {

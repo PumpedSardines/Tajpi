@@ -29,11 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupMenus();
     }
     
-    func applicationWillTerminate(_ notification: Notification) {
-        // I'm not very experienced with apples apis
-        // Without this exit(0), Tajpi would only lauch after clicking the icon twice
-        // Weird...
-        exit(0)
+    @objc private func handleQuit() {
+        NSApplication.shared.terminate(nil)
     }
     
     @objc func onMenuRunningClick() {

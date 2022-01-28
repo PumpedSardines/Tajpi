@@ -10,13 +10,16 @@ import SwiftUI
 
 let app = NSApplication.shared
 
-pollCheckForUpdate();
-pollAccessibility();
-startKeyboardInterception();
+
+// startKeyboardInterception();
 
 let delegate = AppDelegate()
 app.delegate = delegate
 
+pollCheckForUpdate();
+
+// This function also handles stoping and starting of KeyboardInterception
+pollAccessibility();
 
 
 _ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
