@@ -44,11 +44,13 @@ Then find the location of the Application in the finder window and double click 
 Tajpi will appear as an icon in the menu bar. If you click on it, you'll be greeted with a settings interface.
 
 ### Modes
-There exists two modes for entering Esperanto letters. Both can be enabled at the same time.
+There exists three modes for entering Esperanto letters. Any combination of them can be enabled at the same time.
 
 **Mode 1**: To type an esperanto letter press and hold the option key as you press down either c g h j s u and they will transform into ĉ ĝ ĥ ĵ ŝ ŭ.
 
-**Mode 2**: Tajpi will keep track of the letters you press and when it sees the combination sh or sx it will automatically transform it into the corresponding esperanto letter. This is especially useful for people who are already used to typing Esperanto words with x or h.
+**Mode 2**: Tajpi will keep track of the letters you press and when it sees the combination of a latin letter which resembles an esperanto letter and x. It will automatically transform it into the corresponding esperanto letter. This is especially useful for people who are already used to typing Esperanto words with x. Example sx turns into ŝ
+
+**Mode 3**: The same as mode 2 but with h instead of x
 
 ## Possible problems
 Tajpi won't work without enabled accessability permissions. Double check that permissions are set. If you've downloaded a new version, you might need to remove tajpi from the list and add it again by pressing the "-" sign at the bottom left of the ui.
