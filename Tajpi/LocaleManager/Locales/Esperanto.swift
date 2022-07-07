@@ -34,8 +34,12 @@ struct Esperanto: Locale {
         return "option + klavo";
     }
     
-    func modeAutomaticTransform() -> String {
-        return "Transformu sh kaj sx";
+    func modeAutomaticTransformH() -> String {
+        return "Transformu sh";
+    }
+    
+    func modeAutomaticTransformX() -> String {
+        return "Transformu sx";
     }
     
     func updateAvailable() -> String {

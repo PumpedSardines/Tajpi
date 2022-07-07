@@ -172,8 +172,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupMenus()
     }
     
-    @objc func setAutomaticTransformMode() {
-        automaticTransform.change(!automaticTransform.value);
+    @objc func setAutomaticTransformModeX() {
+        automaticTransformX.change(!automaticTransformX.value);
+        setupMenus()
+    }
+    
+    @objc func setAutomaticTransformModeH() {
+        automaticTransformH.change(!automaticTransformH.value);
         setupMenus()
     }
     
@@ -181,22 +186,30 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let menu = NSMenu();
         menu.autoenablesItems = true
         
-        // Init eng button
+        // Init option mode button
         let optionButton = NSMenuItem(title: locale.value.modeOption(), action: #selector(setOptionMode) , keyEquivalent: "")
         optionButton.state = .off
         if(option.value) {
             optionButton.state = .on
         }
         
-        // Init eo button
-        let automaticTransformButton = NSMenuItem(title: locale.value.modeAutomaticTransform(), action: #selector(setAutomaticTransformMode) , keyEquivalent: "")
-        automaticTransformButton.state = .off
-        if(automaticTransform.value) {
-            automaticTransformButton.state = .on
+        // Init transform X button
+        let automaticTransformButtonX = NSMenuItem(title: locale.value.modeAutomaticTransformX(), action: #selector(setAutomaticTransformModeX) , keyEquivalent: "")
+        automaticTransformButtonX.state = .off
+        if(automaticTransformX.value) {
+            automaticTransformButtonX.state = .on
+        }
+        
+        // Init transform H button
+        let automaticTransformButtonH = NSMenuItem(title: locale.value.modeAutomaticTransformH(), action: #selector(setAutomaticTransformModeH) , keyEquivalent: "")
+        automaticTransformButtonH.state = .off
+        if(automaticTransformH.value) {
+            automaticTransformButtonH.state = .on
         }
         
         menu.addItem(optionButton);
-        menu.addItem(automaticTransformButton);
+        menu.addItem(automaticTransformButtonX);
+        menu.addItem(automaticTransformButtonH);
         
         return menu
     }

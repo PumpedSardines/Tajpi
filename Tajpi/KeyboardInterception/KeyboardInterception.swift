@@ -13,7 +13,8 @@ import Swift
 
 var paused = BoolState(id: "keyboard.pause", value: false);
 var option = BoolState(id: "keyboard.option", value: true);
-var automaticTransform = BoolState(id: "keyboard.automaticTransform", value: false);
+var automaticTransformX = BoolState(id: "keyboard.automaticTransformX", value: false);
+var automaticTransformH = BoolState(id: "keyboard.automaticTransformH", value: false);
 
 private var loop: CFRunLoop? = nil;
 private var loopSource: CFRunLoopSource? = nil;

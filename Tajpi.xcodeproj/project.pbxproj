@@ -53,6 +53,7 @@
 		80B2740F27A3E95F005B451F /* Esperanto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Esperanto.swift; sourceTree = "<group>"; };
 		80B2741127A3E97E005B451F /* Swedish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swedish.swift; sourceTree = "<group>"; };
 		80B2741427A3F1B8005B451F /* version */ = {isa = PBXFileReference; lastKnownFileType = text; path = version; sourceTree = "<group>"; };
+		80B428EB2876D3B500C62C3F /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +70,7 @@
 		80B273CA27A2AAD2005B451F = {
 			isa = PBXGroup;
 			children = (
+				80B428EB2876D3B500C62C3F /* CHANGELOG.md */,
 				80B273F927A2B2A0005B451F /* README.md */,
 				808CDE8927A3F82C00B7ADBF /* GIVE_ACCESS.md */,
 				808CDE8727A3F44B00B7ADBF /* .gitignore */,
@@ -414,7 +416,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -444,7 +446,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 1.1.2;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fritiof-rusck.Tajpi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

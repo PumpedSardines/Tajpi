@@ -34,8 +34,12 @@ struct English: Locale {
         return "option + key";
     }
     
-    func modeAutomaticTransform() -> String {
-        return "Transform sh and sx";
+    func modeAutomaticTransformX() -> String {
+        return "Transform sx";
+    }
+    
+    func modeAutomaticTransformH() -> String {
+        return "Transform sh";
     }
     
     func updateAvailable() -> String {
