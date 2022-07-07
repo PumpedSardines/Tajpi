@@ -34,8 +34,12 @@ struct Swedish: Locale {
         return "option + tangent";
     }
     
-    func modeAutomaticTransform() -> String {
-        return "Gör om sh and sx";
+    func modeAutomaticTransformX() -> String {
+        return "Gör om sx";
+    }
+    
+    func modeAutomaticTransformH() -> String {
+        return "Gör om sh";
     }
     
     func updateAvailable() -> String {

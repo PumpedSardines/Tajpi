@@ -39,6 +39,8 @@ func keyboardCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEve
         return Unmanaged.passRetained(event)
     }
     
+    // MARK: - Change if option key is pressed
+    
     // Check for keypress
     if [.keyDown , .keyUp].contains(type) && option.value {
         
@@ -53,14 +55,37 @@ func keyboardCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEve
     }
     
     
+    // MARK: - Automatic transform sh or sx
+    
+    // Stores if any transform is enabled
+    // Since this logic is largely shared, this cleans the code up a bit
+    let isTransformEnabled = (automaticTransformX.value || automaticTransformH.value);
+    
+    // Is this a repeatKey aka is this holding down a key for longer.
+    // This is especially a problem since hh should be transformed
     let repeatedKey = event.getIntegerValueField(.keyboardEventAutorepeat) != 0;
+    
+    
+    // This first if checks if the current event is either a x or a h and replace the last letter if nesseccary
     // replace sh -> ŝ
-    if [.keyDown].contains(type) && !repeatedKey && KeyboardStatus.lastKey != nil && automaticTransform.value {
+    if [.keyDown].contains(type) && !repeatedKey && KeyboardStatus.lastKey != nil && isTransformEnabled {
         let keyCode = event.getIntegerValueField(.keyboardEventKeycode)
         
         if let last = KeyboardStatus.lastKey {
-            // h and x
-            if [ 0x04, 0x07 ].contains(keyCode) {
+            
+            // Add which keycodes should transform automatically
+            var availbleKeyCodes: [Int64] = [];
+            
+            if(automaticTransformX.value) {
+                availbleKeyCodes.append(0x07);
+            }
+            
+            if(automaticTransformH.value) {
+                availbleKeyCodes.append(0x04);
+            }
+            
+            // Replace the last key
+            if availbleKeyCodes.contains(keyCode) {
                 // One left than delete then one right
                 replaceCombination(newLetter: last);
                 KeyboardStatus.lastKey = nil;
@@ -69,7 +94,8 @@ func keyboardCallback(proxy : CGEventTapProxy, type : CGEventType, event : CGEve
         }
     }
     
-    if type == .keyDown && !repeatedKey && automaticTransform.value {
+    // This if stores the pressed key as "lastKey"
+    if type == .keyDown && !repeatedKey && (automaticTransformX.value || automaticTransformH.value) {
         let keyCode = event.getIntegerValueField(.keyboardEventKeycode)
         KeyboardStatus.lastKey = espTransform(shift: KeyboardStatus.shift, keyCode: keyCode);
         return Unmanaged.passRetained(event)
